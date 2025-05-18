@@ -1,0 +1,42 @@
+{
+    "name": "tilabs/laravel-deploy",
+    "description": "Deploy and optimize your Laravel applications with a single command, even on VPS based hostings.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "role": "Developer",
+            "name": "Thomas Iseli",
+            "email": "hey@tilabs.ch",
+            "homepage": "https://tilabs.ch"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tilabs\\LaravelDeploy\\": "src/"
+        }
+    },
+    "minimum-stability": "alpha",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "illuminate/console": "^12.0",
+        "illuminate/http": "^12.0",
+        "illuminate/support": "^12.0"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tilabs\\LaravelDeploy\\Providers\\DeploymentServiceProvider"
+            ]
+        }
+    }
+}
