@@ -45,6 +45,14 @@ This command will now work on Plesk VPS Hostings. If the optimization process is
 php artisan site:optimize
 ```
 
+### Link Public Storage
+
+To link the storage public folder, usually done by running `php artisan storage:link`, you can now use the command below. If everything worked out correctly, you receive the info message **Application storage linked successfully**.
+
+```shell
+php artisan site:storage-link
+```
+
 ### Common Pitfalls
 
 As we are working with caches, it is never a bad idea to just remove the previous cached versions. This can easily be done using the laravel default command to clear the cache.
