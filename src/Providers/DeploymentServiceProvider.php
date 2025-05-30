@@ -6,6 +6,7 @@ namespace Tilabs\LaravelDeploy\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Tilabs\LaravelDeploy\Console\Commands\SiteOptimizeCommand;
+use Tilabs\LaravelDeploy\Console\Commands\SiteOptimizeIconsCommand;
 use Tilabs\LaravelDeploy\Console\Commands\SiteStorageLinkCommand;
 
 final class DeploymentServiceProvider extends ServiceProvider
@@ -28,6 +29,7 @@ final class DeploymentServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 SiteOptimizeCommand::class,
+                SiteOptimizeIconsCommand::class,
                 SiteStorageLinkCommand::class,
             ]);
         }
