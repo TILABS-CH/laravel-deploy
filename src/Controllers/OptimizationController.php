@@ -13,23 +13,12 @@ class OptimizationController
     {
         abort_unless($request->input('key') === config('deployment.key'), 403);
 
-        Artisan::call('route:clear');
-
-        Artisan::call('config:clear');
-
         Artisan::call('cache:clear');
 
-        Artisan::call('event:clear');
+        Artisan::call('optimize:clear');
 
-        Artisan::call('view:clear');
+        Artisan::call('optimize');
 
-        Artisan::call('route:cache');
-
-        Artisan::call('config:cache');
-
-        Artisan::call('event:cache');
-
-        Artisan::call('view:cache');
 
         return 'Application optimized successfully';
     }
